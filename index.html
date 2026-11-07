@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Village</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hud">
+  <span id="hud-place">🏡 Village</span>
+  <span>⭐ XP: <b id="hud-xp">0</b></span>
+  <span>🧠 Đã nhớ: <b id="hud-learned">0</b>/<span id="hud-total">0</span></span>
+  <span>🔥 Chuỗi ngày: <b id="hud-streak">0</b></span>
+  <button class="hud-btn" onclick="if(!busy)openExercises()">🏋️ Luyện tập</button>
+  <button class="hud-btn" onclick="if(!busy)openEditor()">✏️ Soạn bài</button>
+  <button id="hud-ai" class="hud-btn" onclick="if(!busy)openAiSettings()">🤖 AI</button>
+  <span class="hint">Di chuyển: WASD / ←↑→↓ · Nói chuyện: E / Space · Zoom: + / − / lăn chuột</span>
+</div>
+<div id="wrap">
+  <canvas id="game" width="960" height="640"></canvas>
+  <div id="dialog" class="hidden"></div>
+  <div id="toast" class="hidden"></div>
+</div>
+<div id="modal" class="hidden"><div id="modal-box"></div></div>
+<div id="pad">
+  <button data-k="up">▲</button>
+  <div><button data-k="left">◀</button><button data-k="act">E</button><button data-k="right">▶</button></div>
+  <button data-k="down">▼</button>
+</div>
+<script src="js/data.js"></script>
+<script src="js/shops.js"></script>
+<script src="js/jobs.js"></script>
+<script src="js/tenses.js"></script>
+<script src="js/vocab.js"></script>
+<script src="js/game.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/content.js"></script>
+<script src="js/exercises.js"></script>
+</body>
+</html>
